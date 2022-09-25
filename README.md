@@ -518,10 +518,3 @@ my_ng.nasdaq_data('AAPL',2)
   </tbody>
 </table>
 </div>
-
-
-
-
-```python
-$ jupyter nbconvert --to markdown notebook.ipynb
-```

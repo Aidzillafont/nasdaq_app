@@ -2,7 +2,7 @@ from setuptools import setup
 setup(name='nasdaq_data',
 version='0.1.0',
 description='A handy tool to get nasdaq data in python',
-url='#',
+url='https://github.com/Aidzillafont/nasdaq_app',
 author='Aidzillafont',
 author_email='aheffernan0@gmail.com',
 license='MIT',
