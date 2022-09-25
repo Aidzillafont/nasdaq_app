@@ -19,3 +19,5 @@ bin-release/
 
 # custom files to ignore
 **/__pycache__/
+/dist/
+/nasdaq_data.egg-info/

@@ -1,3 +1,9 @@
+# Install guide
+
+```python
+pip install nasdaq-data
+```
+
 # How to
 First import and create an instance of your nasdaq data grabber object
 
