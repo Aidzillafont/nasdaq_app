@@ -61,9 +61,15 @@ class nasdaq_grabber:
     a = dt.datetime.strptime(from_date, date_format)
     b = dt.datetime.strptime(to_date, date_format)
     delta = b - a
+    
     querystring = {"assetclass":"stocks","fromdate":str(from_date),"limit":str(delta.days),"todate":str(to_date)}
 
     response = requests.request("GET", url, headers=self.headers, params=querystring)
     json_r = json.loads(response.text)
+    df = pd.json_normalize(json_r['data']['tradesTable']['rows'])
+    df['volume'] = pd.to_numeric(df['volume'].str.replace(',',''))
 
-    return(pd.json_normalize(json_r['data']['tradesTable']['rows']))
+    for c in ['close','open','high','low']:
+      df[c] = pd.to_numeric(df[c].str[1:].replace(',',''))
+
+    return(df)
