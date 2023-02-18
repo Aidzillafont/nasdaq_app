@@ -1,6 +1,6 @@
 from setuptools import setup
 setup(name='nasdaq_data',
-version='0.1.0',
+version='0.1.1',
 description='A handy tool to get nasdaq data in python',
 url='https://github.com/Aidzillafont/nasdaq_app',
 author='Aidzillafont',
